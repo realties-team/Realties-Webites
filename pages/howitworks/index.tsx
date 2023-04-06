@@ -1,3 +1,5 @@
+import HowItWorks from "@/components/howitworks";
+
 import Head from "next/head";
 import React from "react";
 
@@ -12,7 +14,8 @@ const HowItWorksPage = (props: Props) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/Logo.svg" />
       </Head>
-      <div>HowItWorksPage</div>;
+
+      <HowItWorks />
     </>
   );
 };
