@@ -9,6 +9,12 @@ import bodyImage from "./bodyImage.png";
 import AddUser from "./AddUser.svg";
 import Search from "./Search.svg";
 import Logo from "./Logo.svg";
+import bodyImage2 from "./bodyImage2.png";
+import frame01 from "./frame01.png";
+import frame02 from "./frame02.png";
+import frame03 from "./frame03.png";
+import frame04 from "./frame04.png";
+import Vector from "./Vector.png";
 
 export {
   threePhones,
@@ -22,4 +28,10 @@ export {
   AddUser,
   Search,
   Logo,
+  bodyImage2,
+  frame01,
+  frame02,
+  frame03,
+  frame04,
+  Vector,
 };
