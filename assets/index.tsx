@@ -14,7 +14,29 @@ import frame01 from "./frame01.png";
 import frame02 from "./frame02.png";
 import frame03 from "./frame03.png";
 import frame04 from "./frame04.png";
-import Vector from "./Vector.png";
+import house from "./house.png";
+import building from "./building.png";
+import property01 from "./property01.png";
+import property02 from "./property02.png";
+import property03 from "./property03.png";
+import property04 from "./property04.png";
+import property05 from "./property05.png";
+import property06 from "./property06.png";
+import userLocation from "./location.png";
+import Rating01 from "./Rating01.png";
+import Rating02 from "./Rating02.png";
+import Rating03 from "./Rating03.png";
+import Rating04 from "./Rating04.png";
+import Rating05 from "./Rating05.png";
+import Rating06 from "./Rating06.png";
+import smallDetail01 from "./smallDetail01.png";
+import smallDetail02 from "./smallDetail02.png";
+import smallDetail03 from "./smallDetail03.png";
+import smallDetail04 from "./smallDetail04.png";
+import smallDetail05 from "./smallDetail05.png";
+import smallDetail06 from "./smallDetail06.png";
+import AppStoreIcon from "./AppStoreIcon.png";
+import PlayStoreIcon from "./PlayStoreIcon.png";
 
 export {
   threePhones,
@@ -33,5 +55,27 @@ export {
   frame02,
   frame03,
   frame04,
-  Vector,
+  building,
+  house,
+  property01,
+  property02,
+  property03,
+  property04,
+  property05,
+  property06,
+  userLocation,
+  Rating01,
+  Rating02,
+  Rating03,
+  Rating04,
+  Rating05,
+  Rating06,
+  smallDetail01,
+  smallDetail02,
+  smallDetail03,
+  smallDetail04,
+  smallDetail05,
+  smallDetail06,
+  AppStoreIcon,
+  PlayStoreIcon,
 };
