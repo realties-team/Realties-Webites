@@ -1,3 +1,4 @@
+import Featured from "@/components/featured";
 import Head from "next/head";
 import React from "react";
 
@@ -13,7 +14,7 @@ const FeaturedPage = (props: Props) => {
         <link rel="icon" href="/Logo.svg" />
       </Head>
 
-      <div>FeaturedPage</div>
+      <Featured />
     </>
   );
 };
