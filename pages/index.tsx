@@ -1,6 +1,8 @@
+import CallToAction from "@/components/CallToAction";
 import Featured from "@/components/featured";
 import Home from "@/components/Home";
 import HowItWorks from "@/components/howitworks";
+import EasyStepsToUse from "@/components/howitworks/EasyStepsToUse";
 import Head from "next/head";
 
 export default function HomePage() {
@@ -18,6 +20,10 @@ export default function HomePage() {
       <HowItWorks />
 
       <Featured />
+
+      <CallToAction />
+
+      <EasyStepsToUse />
     </>
   );
 }
