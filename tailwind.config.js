@@ -15,8 +15,10 @@ module.exports = {
         colBlue02: "#0E0854",
         colBlue03: "#252B42",
         colBlue04: "#000036",
+        colBlue05: "#4A74EA",
         colGray01: "#848FAC",
         colGray02: "#A9B4CD",
+        colGray03: "#DFE8F6",
         colBlack01: "#333333",
 
         bgTest: "#DA374326",
