@@ -6,7 +6,7 @@ import {
   ShoppingCartIcon,
 } from "@heroicons/react/24/solid";
 import Harmburger from "./harmburger";
-import { AddUser, Logo, logo, Search } from "@/assets";
+import { AddUser, AddUser01, Search01, Logo, logo, Search } from "@/assets";
 
 //import AnchorLink from "react-anchor-link-smooth-scroll";
 
@@ -37,9 +37,9 @@ function MainHeader() {
       {/* ICONS */}
 
       <div className="gap-6 flex flex-row text-colBlue01 ">
-        <Image src={Search} alt="searchIcon" width={30} height={30}></Image>
+        <Image src={Search01} alt="searchIcon" width={25}></Image>
 
-        <Image src={AddUser} alt="addUserIcon" width={30} height={30}></Image>
+        <Image src={AddUser01} alt="addUserIcon" width={25}></Image>
       </div>
     </header>
   );
