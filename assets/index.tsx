@@ -8,6 +8,8 @@ import icon03 from "./icon03.png";
 import bodyImage from "./bodyImage.png";
 import AddUser from "./AddUser.svg";
 import Search from "./Search.svg";
+import AddUser01 from "./AddUser01.png";
+import Search01 from "./Search01.png";
 import Logo from "./Logo.svg";
 import bodyImage2 from "./bodyImage2.png";
 import frame01 from "./frame01.png";
@@ -37,6 +39,13 @@ import smallDetail05 from "./smallDetail05.png";
 import smallDetail06 from "./smallDetail06.png";
 import AppStoreIcon from "./AppStoreIcon.png";
 import PlayStoreIcon from "./PlayStoreIcon.png";
+import footerLogo from "./footerLogo.png";
+import facebookLogo from "./facebookIcon.svg";
+import twitterLogo from "./twitterIcon.svg";
+import InstagramLogo from "./instagramIcon.svg";
+import facebook from "./facebook.png";
+import twitter from "./twitter.png";
+import ig from "./ig.png";
 
 export {
   threePhones,
@@ -78,4 +87,13 @@ export {
   smallDetail06,
   AppStoreIcon,
   PlayStoreIcon,
+  footerLogo,
+  facebookLogo,
+  twitterLogo,
+  InstagramLogo,
+  facebook,
+  twitter,
+  ig,
+  AddUser01,
+  Search01,
 };
