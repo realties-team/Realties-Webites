@@ -1,8 +1,12 @@
-import CallToAction from "@/components/CallToAction";
-import Featured from "@/components/featured";
+import AfricaMost from "@/components/AfricaMost";
+//import CallToAction from "@/components/CallToAction";
+//import Featured from "@/components/featured";
+import GetNotifiedForm from "@/components/GetNotified";
 import Home from "@/components/Home";
 import HowItWorks from "@/components/howitworks";
 import EasyStepsToUse from "@/components/howitworks/EasyStepsToUse";
+import StepsEndUser from "@/components/StepsEndUser";
+
 import Head from "next/head";
 
 export default function HomePage() {
@@ -19,9 +23,15 @@ export default function HomePage() {
 
       <HowItWorks />
 
-      <Featured />
+      <GetNotifiedForm />
 
-      <CallToAction />
+      <StepsEndUser />
+
+      {/* <Featured /> */}
+
+      <AfricaMost />
+
+      {/* <CallToAction /> */}
 
       <EasyStepsToUse />
     </>
