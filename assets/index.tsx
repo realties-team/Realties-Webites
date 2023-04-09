@@ -49,8 +49,26 @@ import ig from "./ig.png";
 import rocket from "./rocket.png";
 import Xmark from "./Xmark.svg";
 import thankYou from "./thankYou.png";
+import heroImage2 from "./heroImage2.png";
+import bodyImage3 from "./bodyImage3.png";
+import Africa1 from "./Africa1.png";
+import Africa2 from "./Africa2.png";
+import Africa3 from "./Africa3.png";
+import linkedin from "./Linkedin.svg";
+import Facebook from "./Facebook.svg";
+import Twitter from "./Twitter.svg";
+import insta from "./insta.svg";
 
 export {
+  Facebook,
+  linkedin,
+  Twitter,
+  insta,
+  Africa1,
+  Africa2,
+  Africa3,
+  bodyImage3,
+  heroImage2,
   rocket,
   thankYou,
   Xmark,
