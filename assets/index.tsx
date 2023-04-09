@@ -46,8 +46,14 @@ import InstagramLogo from "./instagramIcon.svg";
 import facebook from "./facebook.png";
 import twitter from "./twitter.png";
 import ig from "./ig.png";
+import rocket from "./rocket.png";
+import Xmark from "./Xmark.svg";
+import thankYou from "./thankYou.png";
 
 export {
+  rocket,
+  thankYou,
+  Xmark,
   threePhones,
   heroImage,
   laptopImage,
