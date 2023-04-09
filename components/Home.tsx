@@ -1,10 +1,14 @@
-import { heroImage } from "@/assets";
+import { heroImage, rocket } from "@/assets";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
+import EarlyAccessForm from "./EarlyAccessForm";
+import RegistrationModal from "./RegistrationModal";
 
 type Props = {};
 
 const Home = (props: Props) => {
+  const [showModal, setShowModal] = useState<boolean>(false);
+
   return (
     <>
       {/* Main Container */}
@@ -25,11 +29,17 @@ const Home = (props: Props) => {
           {/* Buttons Container */}
 
           <div className="flex flex-col md:flex-row gap-4 mt-10 ">
-            <button className="px-12 py-3 border-2 rounded-lg bg-colBlue04 border-colBlue04 text-white font-urbanist font-semibold ">
+            <button
+              className="px-12 py-3 border-2 rounded-lg bg-colBlue04 border-colBlue04 text-white font-urbanist font-semibold"
+              onClick={() => setShowModal(true)}
+            >
               Coming soon <br /> ios & Playstore
             </button>
 
-            <button className="px-12 py-3 border-2 rounded-lg bg-white border-colBlue04 text-colBlue01 font-urbanist font-semibold ">
+            <button
+              className="px-12 py-3 border-2 rounded-lg bg-white border-colBlue04 text-colBlue01 font-urbanist font-semibold"
+              onClick={() => setShowModal(true)}
+            >
               Get Early Access
             </button>
           </div>
@@ -39,6 +49,13 @@ const Home = (props: Props) => {
 
         <Image src={heroImage} alt="heroImage" width={600} height={600} />
       </div>
+
+      <RegistrationModal
+        isVisible={showModal}
+        onClose={() => setShowModal(false)}
+      >
+        <EarlyAccessForm />
+      </RegistrationModal>
     </>
   );
 };
