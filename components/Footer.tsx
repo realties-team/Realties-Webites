@@ -56,8 +56,10 @@ const Footer = (props: Props) => {
             </div> */}
 
             <p className="text-white">
-              Lorem ipsum dolor sit amet, <br /> consectetur adipiscing elit.
-              Tellus <br /> orci at nunc vestibulum in in quis.
+              At Realties, we are committed to putting your interest first.{" "}
+              <br /> Join our leading clients already using Realties to find{" "}
+              their <br /> dream properties while enjoying automated
+              transactional benefits
             </p>
           </div>
 
