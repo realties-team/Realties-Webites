@@ -126,15 +126,15 @@ const Footer = (props: Props) => {
 
             {/* PlayStore, AppStore */}
 
-            <div className="flex flex-row gap-5 md:gap-3  mr-4 ">
-              <button className="flex flex-row h-12 gap-4 bg-white p-2  rounded-lg">
+            <div className="flex flex-col md:flex-row gap-4 mt-8 ">
+              <button className="flex flex-row h-14 justify-center  items-center gap-4 bg-white py-2 px-6  rounded-lg">
                 <Image
                   src={PlayStoreIcon}
                   alt="GooglePlayStoreIcon"
                   width={30}
                 />
 
-                <div className="flex flex-col leading-none">
+                <div className="flex flex-col leading-tight">
                   <p className=" -mt-1 text-colBlue02 font-dmsans font-normal">
                     Coming Soon
                   </p>
@@ -144,14 +144,14 @@ const Footer = (props: Props) => {
                 </div>
               </button>
 
-              <button className="flex flex-row h-12 gap-4 bg-white p-2  rounded-lg">
+              <button className="flex flex-row h-14 gap-4 items-center justify-center bg-white py-2 px-6  rounded-lg ">
                 <Image
                   src={AppStoreIcon}
                   alt="GooglePlayStoreIcon"
                   width={30}
                 />
 
-                <div className="flex flex-col leading-none ">
+                <div className="flex flex-col leading-tight">
                   <p className=" -mt-1 text-colBlue02 font-dmsans font-normal">
                     Coming Soon
                   </p>

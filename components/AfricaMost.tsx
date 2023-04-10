@@ -13,7 +13,7 @@ const AfricaMost = (props: Props) => {
         </h3>
       </div>
 
-      <div className="flex flex-col md:flex-row items-center  mx-auto gap-48 mt-16">
+      <div className="flex flex-col md:flex-row items-center  mx-auto  gap-16 md:gap-48 mt-16 ">
         {/* 1 */}
         <div className="flex flex-col items-center">
           <Image src={Africa1} alt="AfricaImage" width={80} className="" />
