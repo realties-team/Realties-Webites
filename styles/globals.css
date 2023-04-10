@@ -67,3 +67,18 @@ body,
 .open .hamburger-bottom {
   transform: rotate(-45deg) translateY(6px) translatex(-6px);
 }
+
+/* Form */
+
+input {
+  width: 100%;
+  padding: 0.65rem 0.5rem;
+}
+
+form {
+  width: 60vw;
+  max-width: 500px;
+  min-width: 300px;
+  margin: 0 auto;
+  padding-bottom: 2em;
+}
