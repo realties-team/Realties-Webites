@@ -84,9 +84,9 @@ const StepsEndUser = (props: Props) => {
           <Image
             src={bodyImage3}
             alt="bodyImage"
-            height={600}
-            width={600}
-            className="h-screen w-screen"
+            height={6000}
+            width={6000}
+            className="h-11/12"
           />
         </div>
       </div>
