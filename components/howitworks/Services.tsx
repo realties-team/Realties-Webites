@@ -15,7 +15,7 @@ const Services = ({ icon, title, description }: Props) => {
           We Are Providing Best Services
         </h2> */}
 
-      <div className="flex flex-row justify-around mt-10 mb-10">
+      <div className="   flex-row justify-around mt-4 md:mt-10 mb-5 md:mb-10">
         <div className="flex flex-col">
           {/* <div className="flex justify-center items-center h-screen"></div> */}
           <Image
