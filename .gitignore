@@ -42,3 +42,5 @@ testimony
 components/HomeTest.tsx
 components/Modal.tsx
 pages/testimony/index.tsx
+components/EarlyAccessForm2.tsx
+pages/testimony/index.tsx
