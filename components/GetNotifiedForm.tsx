@@ -74,7 +74,7 @@ const GetNotifiedForm = (props: Props) => {
 
         {/* Right */}
 
-        <div className="flex flex-col w-[95%] pr-2 ">
+        <div className="flex flex-col w-[95%] px-4 ">
           <div className="flex flex-col space-y-1 ">
             <label
               htmlFor="address"
