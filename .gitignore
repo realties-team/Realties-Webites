@@ -38,3 +38,7 @@ next-env.d.ts
 indexOriginal.tsx
 
 testimony
+
+components/HomeTest.tsx
+components/Modal.tsx
+pages/testimony/index.tsx
