@@ -26,7 +26,7 @@ const GetNotified = (props: Props) => {
               src={rocket}
               alt="rocketLaunchImage"
               width={100}
-              className="mt-6"
+              className="mt-14"
             />
           </div>
 
