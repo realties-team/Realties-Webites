@@ -36,7 +36,7 @@ const HowItWorks = (props: Props) => {
         <div className="flex flex-col mt-32 mx-20 ">
           {/* Mobile */}
 
-          <div className=" flex justify-center items-center flex-col text-colBlack01 font-urbanist font-semibold text-3xl md:hidden ">
+          <div className=" flex justify-center items-center flex-col text-colBlack01 font-urbanist font-semibold text-2xl md:hidden ">
             <h2>We Are Providing</h2>
             <h2>Best Services</h2>
           </div>
