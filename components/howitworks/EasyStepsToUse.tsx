@@ -93,7 +93,7 @@ const EasyStepsToUse = (props: Props) => {
 
         <div className=" flex md:hidden  flex-col mx-12 mt-12  ">
           <h2 className="font-urbanist text-colBlue01 font-semibold text-[35px]  leading-none text-center">
-            Easy steps to br use our real <br /> estate service
+            Easy steps to <br /> use our real <br /> estate service
           </h2>
 
           {/* 01 */}
