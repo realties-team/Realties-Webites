@@ -5,8 +5,11 @@ import { useForm } from "react-hook-form";
 
 type Props = {};
 
-type EmailType = {
-  email: string | symbol | number;
+type FormValues = {
+  name: string;
+  email: string;
+  address: string;
+  phoneNumber: string;
 };
 
 const EarlyAccessForm = (props: Props) => {
@@ -16,38 +19,58 @@ const EarlyAccessForm = (props: Props) => {
     formState: { errors },
   } = useForm();
 
-  const [name, setName] = useState<string>("");
-  const [email, setEmail] = useState<string>("");
-  const [address, setAddress] = useState<string>("");
-  const [phoneNumber, setPhoneNumber] = useState<number>();
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [address, setAddress] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
 
-  const nameHandler = (e: any) => {
+  const nameHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     setName(e.target.value);
   };
 
-  const emailHandler = (e: any) => {
+  const emailHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     setEmail(e.target.value);
   };
 
-  const addressHandler = (e: any) => {
+  const addressHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     setAddress(e.target.value);
   };
 
-  const phoneNumberHandler = (e: any) => {
+  const phoneNumberHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     setPhoneNumber(e.target.value);
   };
 
-  const onSubmitHandler = async (e: any) => {
+  const onSubmitHandler = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
     // trigger() comes from useForm
     const isValid = await trigger();
     if (!isValid) {
-      e.preventDefault();
+      return;
     }
 
-    setName("");
-    setEmail("");
-    setAddress("");
-    setPhoneNumber(0);
+    try {
+      const response = await fetch(
+        "https://realties.cyclic.app/api/coming-soon",
+        {
+          method: "POST",
+          body: JSON.stringify({ name, email, address, phoneNumber }),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+
+      const data = await response.json();
+      console.log(data);
+
+      setName("");
+      setEmail("");
+      setAddress("");
+      setPhoneNumber("");
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
@@ -84,7 +107,6 @@ const EarlyAccessForm = (props: Props) => {
                   </label>
                   <input
                     value={name}
-                    onClick={nameHandler}
                     className="border-colGray04 border rounded outline-none py-1 px-2"
                     type="text"
                     //   placeholder="NAME"
@@ -92,6 +114,7 @@ const EarlyAccessForm = (props: Props) => {
                       required: true,
                       maxLength: 100,
                     })}
+                    onChange={nameHandler}
                   />
                   {errors.name && (
                     <p className="mt-1 text-red-600">
@@ -112,7 +135,6 @@ const EarlyAccessForm = (props: Props) => {
                   </label>
                   <input
                     value={email}
-                    onClick={emailHandler}
                     className="border-colGray04 border rounded outline-none py-1 px-2"
                     type="email"
                     //   placeholder="EMAIL"
@@ -120,6 +142,7 @@ const EarlyAccessForm = (props: Props) => {
                       required: true,
                       pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
                     })}
+                    onChange={emailHandler}
                   />
                   {errors.email && (
                     <p className="mt-1 text-red-600">
@@ -145,7 +168,6 @@ const EarlyAccessForm = (props: Props) => {
                   </label>
                   <input
                     value={address}
-                    onClick={addressHandler}
                     className="border-colGray04 border rounded outline-none py-1 px-2"
                     type="text"
                     //   placeholder="ADDRESS"
@@ -153,6 +175,7 @@ const EarlyAccessForm = (props: Props) => {
                       required: true,
                       maxLength: 100,
                     })}
+                    onChange={addressHandler}
                   />
                   {errors.name && (
                     <p className="mt-1 text-red-600">
@@ -173,7 +196,6 @@ const EarlyAccessForm = (props: Props) => {
                   </label>
                   <input
                     value={phoneNumber}
-                    onClick={phoneNumberHandler}
                     className="border-colGray04 border rounded outline-none py-1 px-2"
                     type="number"
                     //   placeholder="PHONE NUMBER"
@@ -181,6 +203,7 @@ const EarlyAccessForm = (props: Props) => {
                       required: true,
                       maxLength: 100,
                     })}
+                    onChange={phoneNumberHandler}
                   />
                   {errors.name && (
                     <p className="mt-1 text-red-600">
@@ -194,14 +217,17 @@ const EarlyAccessForm = (props: Props) => {
               </div>
             </div>
 
-            <button className="bg-colBlue04 rounded-lg text-white px-8 py-3 gap-2 mt-14 flex flex-row font-urbanist font-bold text-lg  justify-center items-center mx-auto ">
+            <button
+              type="submit"
+              className="bg-colBlue04 rounded-lg text-white px-8 py-3 gap-2 mt-14 flex flex-row font-urbanist font-bold text-lg  justify-center items-center mx-auto "
+            >
               Get early access
               <Image
                 src={rocket}
                 alt="rocketLaunchIcon"
                 width={20}
                 className="mt-1"
-              />
+              />{" "}
             </button>
           </form>
         </div>
