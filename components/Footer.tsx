@@ -29,8 +29,13 @@ const Footer = (props: Props) => {
       <div className="bg-colBlue04  mt-32">
         <div className=" mt-24  mb-24 flex flex-col md:flex-row justify-between mx-10  md:mx-20  ">
           {/*Left Container  */}
-          <div className="flex flex-col ml-10 md:ml-20">
-            <Image src={footerLogo} alt="logoImage" width={200} />
+          <div className="flex flex-col ml-5 md:ml-20">
+            <Image
+              src={footerLogo}
+              alt="logoImage"
+              width={200}
+              className="-ml-10"
+            />
             {/* 
             <h2
               className="text-white
@@ -64,7 +69,7 @@ const Footer = (props: Props) => {
           </div>
 
           {/* Right Container */}
-          <div className="flex flex-col md:flex-row gap-8 md:gap-12 mr-24 mt-10 ml-10">
+          <div className="flex flex-col md:flex-row gap-8 md:gap-12 mr-24 mt-10 ml-5 md:ml-10">
             {/* 1 */}
             <div className=" flex flex-col text-white ">
               <h2 className="font-urbanist font-bold text-lg">How It Works</h2>
@@ -103,7 +108,7 @@ const Footer = (props: Props) => {
 
         {/* Socials */}
 
-        <div className="border-white border-b-2 py-2  w-4/5  ml-16 md:ml-40  ">
+        <div className="border-white border-b-2 py-2  w-4/5   ml-14 md:ml-40  ">
           <div className="flex flex-col md:flex-row justify-between space-y-8 md:space-y-0 ">
             {/* socialLogos */}
             <div className="flex flex-row  gap-4 ml-2  ">
@@ -126,7 +131,7 @@ const Footer = (props: Props) => {
 
             {/* PlayStore, AppStore */}
 
-            <div className="flex flex-col md:flex-row gap-4 mt-8 ">
+            <div className="flex flex-col md:flex-row gap-4 mt-8  mr-8  ">
               <button className="flex flex-row h-14 justify-center  items-center gap-4 bg-white py-2 px-6  rounded-lg">
                 <Image
                   src={PlayStoreIcon}
