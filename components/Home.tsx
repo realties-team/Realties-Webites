@@ -18,15 +18,23 @@ const Home = (props: Props) => {
   return (
     <>
       {/* Main Container */}
-      <div className="flex flex-col md:flex-row  mx-12  justify-between mt-20">
+      <div className="flex flex-col md:flex-row  mx-12  justify-between mt-32 md:mt-20">
         {/* Right Container... Contents and Buttons */}
 
-        <div className="flex flex-col  w-3/5">
-          <h1 className="text-[70px] font-urbanist text-colBlue01 font-semibold leading-tight">
+        <div className="flex flex-col ">
+          <h1 className="md:text-[70px] text-[50px]  font-urbanist text-colBlue01 font-semibold leading-tight">
             Uniting all your real estate dreams in a single button
           </h1>
 
-          <p className="mt-6 text-colGray01 font-urbanist font-normal text-lg  ">
+          {/* Mobile */}
+
+          <p className="mt-6 text-colGray01 font-urbanist font-normal text-lg md:hidden flex ">
+            This application for the needs of buying, rent, <br /> and selling
+            property. Uniting all your real estate dreams in a single button
+          </p>
+
+          {/* Desktop */}
+          <p className="mt-6 text-colGray01 font-urbanist font-normal text-lg hidden md:flex  ">
             This application for the needs of buying, rent, and selling <br />
             property. Uniting all your real estate dreams in a single button
           </p>
@@ -49,21 +57,26 @@ const Home = (props: Props) => {
             </button>
           </div> */}
 
-          <div className="flex flex-row gap-4 mt-8 ">
-            <button className="flex flex-row h-16 gap-4 bg-white py-2 px-6 border-2 border-colBlue04 rounded-lg">
-              <Image src={PlayStoreIcon} alt="GooglePlayStoreIcon" width={40} />
+          <div className="flex flex-col md:flex-row gap-4 mt-8 ">
+            <button className="flex flex-row h-16  justify-center  items-center gap-4 bg-white py-2 px-6 border-2 border-colBlue04 rounded-lg">
+              <Image
+                src={PlayStoreIcon}
+                alt="GooglePlayStoreIcon"
+                width={40}
+                className=" md:ml-0"
+              />
 
               <div className="flex flex-col leading-tight">
                 <p className="text-colBlue02 font-dmsans font-normal">
-                  Coming Soon{" "}
+                  Coming Soon
                 </p>
-                <h2 className="font-urbanist font-bold text-colBlue02 text-lg">
+                <h2 className="font-urbanist font-bold text-colBlue02  md:text-lg">
                   Google Play
                 </h2>
               </div>
             </button>
 
-            <button className="flex flex-row h-16 gap-4 bg-white py-2 px-6 border-2 border-colBlue04 rounded-lg ">
+            <button className="flex flex-row h-16 gap-4 items-center justify-center bg-white py-2 px-6 border-2 border-colBlue04 rounded-lg ">
               <Image
                 src={AppStoreIcon}
                 alt="GooglePlayStoreIcon"
@@ -85,7 +98,13 @@ const Home = (props: Props) => {
 
         {/* Left Container... Hero Image */}
 
-        <Image src={heroImage2} alt="heroImage" width={600} height={600} />
+        <Image
+          src={heroImage2}
+          alt="heroImage"
+          width={600}
+          height={600}
+          className="mt-20 md:mt-0"
+        />
       </div>
 
       <RegistrationModal
