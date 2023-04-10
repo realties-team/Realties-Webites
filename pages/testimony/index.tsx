@@ -1,3 +1,4 @@
+import HomeTest from "@/components/HomeTest";
 import Head from "next/head";
 import React from "react";
 
@@ -13,7 +14,10 @@ const TestimonyPage = (props: Props) => {
         <link rel="icon" href="/Logo.svg" />
       </Head>
 
-      <div>TestimonyPage</div>
+      <div>
+        TestimonyPage
+        <HomeTest />
+      </div>
     </>
   );
 };

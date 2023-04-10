@@ -22,7 +22,7 @@ const GetNotifiedForm = (props: Props) => {
     <form onSubmit={onSubmitHandler}>
       <div className="flex flex-col md:flex-row gap-5 md:gap-10 px-2 py-10   ">
         {/* Left */}
-        <div className="flex flex-col w-full ">
+        <div className="flex flex-col w-[95%] ">
           <div className="  flex flex-col space-y-1 ">
             <label
               htmlFor="name"
@@ -74,7 +74,7 @@ const GetNotifiedForm = (props: Props) => {
 
         {/* Right */}
 
-        <div className="flex flex-col w-full">
+        <div className="flex flex-col w-[95%]">
           <div className="flex flex-col space-y-1 ">
             <label
               htmlFor="address"
@@ -83,7 +83,7 @@ const GetNotifiedForm = (props: Props) => {
               Address
             </label>
             <input
-              className=" text-white border border-white rounded-md outline-none bg-colBlue04 py-1 "
+              className=" text-white border border-white rounded-md outline-none bg-colBlue04 py-1  "
               type="text"
               //   placeholder="ADDRESS"
               {...register("address", {
