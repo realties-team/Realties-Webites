@@ -9,12 +9,12 @@ const GetNotified = (props: Props) => {
   return (
     <>
       {/* Background */}
-      <div className="flex flex-row bg-colBlue04 md:mx-auto mx-2 w-5/6 rounded-2xl mt-32 ">
+      <div className="flex flex-row bg-colBlue04 mx-auto  w-5/6 rounded-2xl mt-32 ">
         {/* Main Container */}
 
         <div className="flex w-screen p-4 md:flex-row flex-col ">
           {/* Left*/}
-          <div className="flex flex-col p-6 ml-5 md:ml-10 mt-6  ">
+          <div className="flex flex-col p-6 ml-2 md:ml-10 mt-6  ">
             <h2
               className="font-urbanist font-bold text-white text-2xl
                       
