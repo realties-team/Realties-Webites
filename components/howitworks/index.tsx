@@ -34,11 +34,19 @@ const HowItWorks = (props: Props) => {
     <>
       <div>
         <div className="flex flex-col mt-32 mx-20 ">
-          <h2 className=" flex justify-center items-center text-colBlack01 font-urbanist font-semibold text-2xl ">
+          {/* Mobile */}
+
+          <div className=" flex justify-center items-center flex-col text-colBlack01 font-urbanist font-semibold text-3xl md:hidden ">
+            <h2>We Are Providing</h2>
+            <h2>Best Services</h2>
+          </div>
+
+          {/* Desktop */}
+          <h2 className="  justify-center items-center hidden md:flex text-colBlack01 font-urbanist font-semibold text-2xl ">
             We Are Providing Best Services
           </h2>
 
-          <div className="flex flex-row justify-around mt-10 mb-20">
+          <div className="flex flex-col md:flex-row justify-around mt-10 mb-20">
             {services.map((service: ServiceType) => (
               <Services
                 key={service.id}
