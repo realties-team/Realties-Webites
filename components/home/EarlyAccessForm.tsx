@@ -109,7 +109,7 @@ const EarlyAccessForm = (props: Props) => {
           <form onSubmit={onSubmitHandler}>
             {/* Form Input container */}
 
-            <div className="flex flex-col md:flex-row w-full gap-4  md:gap-8 mt-10 ">
+            <div className="flex flex-col md:flex-row w-[90%] md:w-full gap-4  md:gap-8 mt-10 ">
               {/* Left side */}
               <div className="flex flex-col space-y-4">
                 <div className="flex flex-col space-y-1 ">

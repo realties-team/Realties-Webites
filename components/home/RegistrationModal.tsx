@@ -20,7 +20,7 @@ const RegistrationModal = ({ isVisible, onClose, children }: Props) => {
       id="wrapper"
       onClick={handleClose}
     >
-      <div className=" mt-32 md:mt-0 w-[430px] md:w-[700px] flex flex-col relative">
+      <div className=" -ml-8 w-[400px] md:w-[700px] flex flex-col relative">
         <button
           className="text-black text-2xl absolute top-6 right-10   "
           onClick={() => onClose()}
