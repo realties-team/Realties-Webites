@@ -1,13 +1,9 @@
 import { AppStoreIcon, PlayStoreIcon, threePhones } from "@/assets";
 import Image from "next/image";
-import { useState } from "react";
-// import ThankYou from "./ThankYouMessage";
-// import ThankYouModal from "./ThankYouModal";
 
 type Props = {};
 
 const CallToAction = (props: Props) => {
-  const [showModal, setShowModal] = useState<boolean>(false);
   return (
     <>
       <div
@@ -49,7 +45,6 @@ const CallToAction = (props: Props) => {
                   src={AppStoreIcon}
                   alt="GooglePlayStoreIcon"
                   width={50}
-                  onClick={() => setShowModal(true)}
                 />
 
                 <div className="flex flex-col">
@@ -74,9 +69,6 @@ const CallToAction = (props: Props) => {
         />
       </div>
       ;
-      {/* <ThankYouModal isVisible={showModal} onClose={() => setShowModal(false)}>
-        <ThankYou onc />
-      </ThankYouModal> */}
     </>
   );
 };
