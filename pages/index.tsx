@@ -1,11 +1,11 @@
-import AfricaMost from "@/components/AfricaMost";
+import AfricaMost from "@/components/home/AfricaMost";
 //import CallToAction from "@/components/CallToAction";
 //import Featured from "@/components/featured";
-import GetNotifiedForm from "@/components/GetNotified";
-import Home from "@/components/Home";
+import GetNotifiedForm from "@/components/home/GetNotified";
+import Home from "@/components/home";
 import HowItWorks from "@/components/howitworks";
 import EasyStepsToUse from "@/components/howitworks/EasyStepsToUse";
-import StepsEndUser from "@/components/StepsEndUser";
+import StepsEndUser from "@/components/home/StepsEndUser";
 
 import Head from "next/head";
 
