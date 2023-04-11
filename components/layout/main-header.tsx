@@ -5,19 +5,20 @@ import RegistrationModal from "../home/RegistrationModal";
 import EarlyAccessForm from "../home/EarlyAccessForm";
 import { useState } from "react";
 import HamburgerMenu from "./harmburger";
+
 //import AnchorLink from "react-anchor-link-smooth-scroll";
 
 function MainHeader() {
   const [showModal, setShowModal] = useState<boolean>(false);
 
   return (
-    <header className="flex items-center justify-between mx-6 md:mx-32 ">
+    <header className="flex items-center justify-between mr-20 ">
       <Image
         src={logo}
         alt="LogoImage"
         width={200}
         height={200}
-        className="hidden md:flex -ml-20"
+        className="hidden md:flex"
       />
 
       {/*Navigation Links  */}
@@ -42,7 +43,7 @@ function MainHeader() {
 
               <button
                 onClick={() => setShowModal(true)}
-                className="text-white font-dmsans mr-20 flex   bg-colBlue02 px-4 py-2 rounded-lg  ml-10 "
+                className="text-white font-dmsans font-  bg-colBlue02 px-4 py-2 rounded-lg  ml-10 "
               >
                 Get early access
               </button>

@@ -18,11 +18,11 @@ const Home = (props: Props) => {
   return (
     <>
       {/* Main Container */}
-      <div className="flex flex-col md:flex-row  mx-16 md:mx-20  justify-between mt-32 md:mt-20">
+      <div className="flex flex-col md:flex-row  mx-12  justify-between mt-32 md:mt-20">
         {/* Right Container... Contents and Buttons */}
 
         <div className="flex flex-col ">
-          <h1 className="md:text-[70px] text-[50px]  font-urbanist text-colBlue01 font-semibold leading-tight ">
+          <h1 className="md:text-[70px] text-[50px]  font-urbanist text-colBlue01 font-semibold leading-tight">
             Uniting all your real estate dreams in a single button
           </h1>
 
