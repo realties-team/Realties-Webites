@@ -112,11 +112,11 @@ const Footer = (props: Props) => {
           <div className="flex flex-col md:flex-row justify-between space-y-8 md:space-y-0 ">
             {/* socialLogos */}
             <div className="flex flex-row  gap-4 ml-2  ">
-              <Link href="https://www.linkedin.com/company/realtiestech/mycompany/">
+              <Link href="https://www.linkedin.com/company/realtiestech/">
                 <Image src={linkedin} alt="linkedinLogo" width={40} />
               </Link>
 
-              <Link href="https://www.linkedin.com/company/realtiestech/mycompany/">
+              <Link href="https://twitter.com/realtiestech">
                 <Image src={Twitter} alt="linkedinLogo" width={40} />
               </Link>
 
@@ -124,7 +124,7 @@ const Footer = (props: Props) => {
                 <Image src={Facebook} alt="linkedinLogo" width={40} />
               </Link>
 
-              <Link href="https://www.linkedin.com/company/realtiestech/mycompany/">
+              <Link href="https://instagram.com/realtiestech?igshid=YmMyMTA2M2Y=">
                 <Image src={insta} alt="linkedinLogo" width={40} />
               </Link>
             </div>
