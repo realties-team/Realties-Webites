@@ -1,8 +1,8 @@
 import { AppStoreIcon, PlayStoreIcon, threePhones } from "@/assets";
 import Image from "next/image";
 import { useState } from "react";
-import ThankYou from "./ThankYouMessage";
-import ThankYouModal from "./ThankYouModal";
+// import ThankYou from "./ThankYouMessage";
+// import ThankYouModal from "./ThankYouModal";
 
 type Props = {};
 
@@ -74,9 +74,9 @@ const CallToAction = (props: Props) => {
         />
       </div>
       ;
-      <ThankYouModal isVisible={showModal} onClose={() => setShowModal(false)}>
-        <ThankYou />
-      </ThankYouModal>
+      {/* <ThankYouModal isVisible={showModal} onClose={() => setShowModal(false)}>
+        <ThankYou onc />
+      </ThankYouModal> */}
     </>
   );
 };
