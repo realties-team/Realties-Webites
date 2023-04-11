@@ -11,7 +11,7 @@ function MainHeader() {
   const [showModal, setShowModal] = useState<boolean>(false);
 
   return (
-    <header className="flex items-center justify-between mx-12 md:mx-32 ">
+    <header className="flex items-center justify-between mx-6 md:mx-32 ">
       <Image
         src={logo}
         alt="LogoImage"
