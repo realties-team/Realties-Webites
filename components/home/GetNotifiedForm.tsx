@@ -1,25 +1,57 @@
-import { useForm } from "react-hook-form";
-
-useForm;
+import { useState } from "react";
 
 type Props = {};
 
 const GetNotifiedForm = (props: Props) => {
-  const {
-    register,
-    trigger,
-    formState: { errors },
-  } = useForm();
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [address, setAddress] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
 
-  const onSubmitHandler = async (e: any) => {
-    // trigger() comes from useForm
-    const isValid = await trigger();
-    if (!isValid) {
-      e.preventDefault();
+  const nameHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setName(e.target.value);
+  };
+
+  const emailHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setEmail(e.target.value);
+  };
+
+  const addressHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setAddress(e.target.value);
+  };
+
+  const phoneNumberHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setPhoneNumber(e.target.value);
+  };
+
+  const onSubmitHandler = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    try {
+      const response = await fetch(
+        "https://realties.cyclic.app/api/coming-soon",
+        {
+          method: "POST",
+          body: JSON.stringify({ name, email, address, phoneNumber }),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+
+      const data = await response.json();
+      console.log(data);
+      setName("");
+      setEmail("");
+      setAddress("");
+      setPhoneNumber("");
+    } catch (error) {
+      console.log(error);
     }
   };
+
   return (
-    <form onSubmit={onSubmitHandler}>
+    <form onSubmit={onSubmitHandler} id="getNotified">
       <div className="flex flex-col md:flex-row gap-5 md:gap-10 px-2 py-10 mr-5 md:mr-0 ">
         {/* Left */}
         <div className="flex flex-col w-full  ">
@@ -30,21 +62,16 @@ const GetNotifiedForm = (props: Props) => {
             >
               Name
             </label>
+
             <input
-              className=" border border-white rounded-md outline-none bg-colBlue04 py-1 text-white "
+              value={name}
+              onChange={nameHandler}
               type="text"
-              //   placeholder="NAME"
-              {...register("name", {
-                required: true,
-                maxLength: 100,
-              })}
+              name="name"
+              id="name"
+              required
+              className=" border border-white rounded-md outline-none bg-colBlue04 py-1 text-white "
             />
-            {errors.name && (
-              <p className="mt-1 text-white">
-                {errors.name.type === "required" && "This field is required."}
-                {errors.name.type === "maxLength" && "Max length is 100 char."}
-              </p>
-            )}
           </div>
 
           <div className="flex flex-col space-y-1 n mt-3">
@@ -54,21 +81,18 @@ const GetNotifiedForm = (props: Props) => {
             >
               Email
             </label>
+
             <input
-              className=" text-white border border-white rounded-md outline-none bg-colBlue04 py-1 "
+              value={email}
+              onChange={emailHandler}
               type="email"
-              //   placeholder="EMAIL"
-              {...register("email", {
-                required: true,
-                pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-              })}
+              name="email"
+              id="email"
+              required
+              // pattern="/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i
+              // "
+              className=" text-white border border-white rounded-md outline-none bg-colBlue04 py-1 "
             />
-            {errors.email && (
-              <p className="mt-1 text-white">
-                {errors.email.type === "required" && "This field is required."}
-                {errors.email.type === "pattern" && "Invalid email address."}
-              </p>
-            )}
           </div>
         </div>
 
@@ -82,21 +106,16 @@ const GetNotifiedForm = (props: Props) => {
             >
               Address
             </label>
+
             <input
-              className=" text-white border border-white rounded-md outline-none bg-colBlue04 py-1  "
+              value={address}
+              onChange={addressHandler}
               type="text"
-              //   placeholder="ADDRESS"
-              {...register("address", {
-                required: true,
-                maxLength: 100,
-              })}
+              name="address"
+              id="address"
+              required
+              className=" text-white border border-white rounded-md outline-none bg-colBlue04 py-1"
             />
-            {errors.name && (
-              <p className="mt-1 text-white">
-                {errors.name.type === "required" && "This field is required."}
-                {errors.name.type === "maxLength" && "Max length is 100 char."}
-              </p>
-            )}
           </div>
 
           <div className="flex flex-col space-y-1 mt-3 ">
@@ -106,21 +125,16 @@ const GetNotifiedForm = (props: Props) => {
             >
               Phone Number
             </label>
+
             <input
-              className="text-white border border-white rounded-md outline-none bg-colBlue04 py-1 "
+              value={phoneNumber}
+              onChange={phoneNumberHandler}
               type="number"
-              //   placeholder="PHONE NUMBER"
-              {...register("phoneNumber", {
-                required: true,
-                maxLength: 100,
-              })}
+              name="phoneNumber"
+              id="phoneNumber"
+              required
+              className="text-white border border-white rounded-md outline-none bg-colBlue04 py-1 "
             />
-            {errors.name && (
-              <p className="mt-1 text-white">
-                {errors.name.type === "required" && "This field is required."}
-                {errors.name.type === "maxLength" && "Max length is 100 char."}
-              </p>
-            )}
           </div>
 
           <button
