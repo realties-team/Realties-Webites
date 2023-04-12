@@ -1,7 +1,6 @@
 import { rocket } from "@/assets";
 import Image from "next/image";
-import { FormEventHandler, useState } from "react";
-import { useForm } from "react-hook-form";
+import { useState } from "react";
 import ThankYouMessage from "./ThankYouMessage";
 import ThankYouModal from "./ThankYouModal";
 
@@ -19,12 +18,6 @@ type FormValues = {
 const EarlyAccessForm = (props: Props) => {
   const [showThankYouModal, setShowThankYouModal] = useState<boolean>(false);
   const [isLoading, setIsLoading] = useState<boolean>(false);
-
-  const {
-    register,
-    trigger,
-    formState: { errors },
-  } = useForm();
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -51,13 +44,6 @@ const EarlyAccessForm = (props: Props) => {
     e.preventDefault();
 
     setIsLoading(true);
-
-    // trigger() comes from useForm
-    const isValid = await trigger();
-    if (!isValid) {
-      setIsLoading(false);
-      return;
-    }
 
     try {
       const response = await fetch(
@@ -115,58 +101,39 @@ const EarlyAccessForm = (props: Props) => {
                 <div className="flex flex-col space-y-1 ">
                   <label
                     htmlFor="name"
-                    className="font-urbanist font-semibold   text-colGray05
-                "
+                    className="font-urbanist font-semibold   text-colGray05"
                   >
                     Name
                   </label>
+
                   <input
                     value={name}
-                    className="border-colGray04 border rounded outline-none py-1 px-2"
-                    type="text"
-                    //   placeholder="NAME"
-                    {...register("name", {
-                      required: true,
-                      maxLength: 100,
-                    })}
                     onChange={nameHandler}
+                    type="text"
+                    name="name"
+                    id="name"
+                    className="border-colGray04 border rounded outline-none py-1 px-2"
+                    required
                   />
-                  {errors.name && (
-                    <p className="mt-1 text-red-600">
-                      {errors.name.type === "required" &&
-                        "This field is required."}
-                      {errors.name.type === "maxLength" &&
-                        "Max length is 100 char."}
-                    </p>
-                  )}
                 </div>
                 <div className="flex flex-col space-y-1">
                   <label
                     htmlFor="email"
-                    className="font-urbanist font-semibold   text-colGray05
-                "
+                    className="font-urbanist font-semibold   text-colGray05"
                   >
-                    Email address
+                    Email address{" "}
                   </label>
+
                   <input
                     value={email}
-                    className="border-colGray04 border rounded outline-none py-1 px-2"
-                    type="email"
-                    //   placeholder="EMAIL"
-                    {...register("email", {
-                      required: true,
-                      pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                    })}
                     onChange={emailHandler}
+                    type="email"
+                    name="email"
+                    id="email"
+                    required
+                    className="border-colGray04 border rounded outline-none py-1 px-2"
+                    pattern="/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i"
                   />
-                  {errors.email && (
-                    <p className="mt-1 text-red-600">
-                      {errors.email.type === "required" &&
-                        "This field is required."}
-                      {errors.email.type === "pattern" &&
-                        "Invalid email address."}
-                    </p>
-                  )}
                 </div>
               </div>
 
@@ -181,25 +148,16 @@ const EarlyAccessForm = (props: Props) => {
                   >
                     Address
                   </label>
+
                   <input
                     value={address}
-                    className="border-colGray04 border rounded outline-none py-1 px-2"
-                    type="text"
-                    //   placeholder="ADDRESS"
-                    {...register("address", {
-                      required: true,
-                      maxLength: 100,
-                    })}
                     onChange={addressHandler}
+                    type="text"
+                    name="address"
+                    id="address"
+                    required
+                    className="border-colGray04 border rounded outline-none py-1 px-2"
                   />
-                  {errors.name && (
-                    <p className="mt-1 text-red-600">
-                      {errors.name.type === "required" &&
-                        "This field is required."}
-                      {errors.name.type === "maxLength" &&
-                        "Max length is 100 char."}
-                    </p>
-                  )}
                 </div>
                 <div className="flex flex-col space-y-1 ">
                   <label
@@ -209,25 +167,16 @@ const EarlyAccessForm = (props: Props) => {
                   >
                     Phone Number
                   </label>
+
                   <input
                     value={phoneNumber}
-                    className="border-colGray04 border rounded outline-none py-1 px-2"
-                    type="number"
-                    //   placeholder="PHONE NUMBER"
-                    {...register("phoneNumber", {
-                      required: true,
-                      maxLength: 100,
-                    })}
                     onChange={phoneNumberHandler}
+                    type="number"
+                    name="phoneNumber"
+                    id="phoneNumber"
+                    required
+                    className="border-colGray04 border rounded outline-none py-1 px-2"
                   />
-                  {errors.name && (
-                    <p className="mt-1 text-red-600">
-                      {errors.name.type === "required" &&
-                        "This field is required."}
-                      {errors.name.type === "maxLength" &&
-                        "Max length is 100 char."}
-                    </p>
-                  )}
                 </div>
               </div>
             </div>
