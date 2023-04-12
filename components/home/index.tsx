@@ -28,16 +28,59 @@ const Home = (props: Props) => {
 
           {/* Mobile */}
 
-          <p className="mt-6 text-colGray01 font-urbanist font-normal text-lg md:hidden flex ">
-            This application for the needs of buying, rent, <br /> and selling
-            property. Uniting all your real estate dreams in a single button
-          </p>
+          <div className="mt-6 text-colGray01 font-urbanist font-normal text-lg md:hidden flex flex-col ">
+            <p>
+              This application is suitable and convenient <br /> for the need of
+              buying, selling and renting <br /> of properties. <br /> As well
+              as saving up for paying of rent and accruing of properties. An
+              inventiveness in <br /> real estate providing solutions for the
+              aim <br /> of making your real estate dreams turning <br /> into
+              reality.
+            </p>
+
+            <p>
+              A platform enabling quick and convenient interactions in wrapped
+              up your real <br /> estate deal.
+            </p>
+
+            <p>
+              Owning a property is a huge investment <br /> and Realities is a
+              fast and reliable platform <br /> in achieving that goal.
+            </p>
+            <p>
+              Trusted to save up your rent there by <br /> building a healthy
+              Tenant and landlord relationship
+            </p>
+          </div>
 
           {/* Desktop */}
-          <p className="mt-6 text-colGray01 font-urbanist font-normal text-lg hidden md:flex  ">
-            This application for the needs of buying, rent, and selling <br />
-            property. Uniting all your real estate dreams in a single button
-          </p>
+
+          <div className="mt-6 text-colGray01 font-urbanist font-normal text-lg hidden md:flex flex-col">
+            <p>
+              This application is suitable and convenient for the need of
+              buying, <br /> selling and renting of properties. As well as
+              saving up for paying <br /> of rent and accruing of properties. An
+              inventiveness in real estate <br />
+              providing solutions for the aim of making your real estate dreams{" "}
+              <br />
+              turning into reality.
+            </p>
+            <p>
+              A platform enabling quick and convenient interactions in wrapped
+              <br /> up your real estate deal.
+            </p>
+
+            <p>
+              Owning a property is a huge investment and Realities is a fast and{" "}
+              <br />
+              reliable platform in achieving that goal.
+            </p>
+            <p>
+              Trusted to save up your rent there by building a healthy Tenants{" "}
+              <br />
+              and landlord relationship
+            </p>
+          </div>
 
           {/* Buttons Container */}
 
