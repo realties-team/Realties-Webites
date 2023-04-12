@@ -58,8 +58,14 @@ import linkedin from "./Linkedin.svg";
 import Facebook from "./Facebook.svg";
 import Twitter from "./Twitter.svg";
 import insta from "./insta.svg";
+import youtube from "./youtube.png";
+import appleStore from "./applestore.png";
+import googlePlayStore from "./googleplaystore.png";
 
 export {
+  appleStore,
+  googlePlayStore,
+  youtube,
   Facebook,
   linkedin,
   Twitter,
