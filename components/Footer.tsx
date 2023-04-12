@@ -108,10 +108,10 @@ const Footer = (props: Props) => {
 
         {/* Socials */}
 
-        <div className="border-white border-b-2 py-2  w-4/5   ml-14 md:ml-40  ">
+        <div className="border-white border-b-2 py-2  w-4/5 ml-14 md:ml-40  ">
           <div className="flex flex-col md:flex-row justify-between space-y-8 md:space-y-0 ">
             {/* socialLogos */}
-            <div className="flex flex-row  gap-4 ml-2  ">
+            <div className="flex flex-row  gap-4 ml-2 ">
               <Link href="https://www.linkedin.com/company/realtiestech/">
                 <Image src={linkedin} alt="linkedinLogo" width={40} />
               </Link>
@@ -131,40 +131,44 @@ const Footer = (props: Props) => {
 
             {/* PlayStore, AppStore */}
 
-            <div className="flex flex-col md:flex-row gap-4 mt-8  mr-8  ">
-              <button className="flex flex-row h-14 justify-center  items-center gap-4 bg-white py-2 px-6  rounded-lg">
-                <Image
-                  src={PlayStoreIcon}
-                  alt="GooglePlayStoreIcon"
-                  width={30}
-                />
+            <div className="flex flex-col md:flex-row gap-4 mt-8  mr-8">
+              <Link href="#getNotified">
+                <button className="flex flex-row justify-center  items-center gap-4 bg-white px-6  h-10 rounded">
+                  <Image
+                    src={PlayStoreIcon}
+                    alt="GooglePlayStoreIcon"
+                    width={30}
+                  />
 
-                <div className="flex flex-col leading-tight">
-                  <p className=" -mt-1 text-colBlue02 font-dmsans font-normal">
-                    Coming Soon
-                  </p>
-                  <h2 className=" -mt-1 font-urbanist font-bold text-colBlue02 text-xl">
-                    Google Play
-                  </h2>
-                </div>
-              </button>
+                  <div className="flex flex-col leading-none">
+                    <p className=" mt-1 text-colBlue02 font-dmsans font-normal">
+                      Coming Soon
+                    </p>
+                    <h2 className=" -mt-2 font-urbanist font-bold text-colBlue02 text-xl">
+                      Google Play
+                    </h2>
+                  </div>
+                </button>
+              </Link>
 
-              <button className="flex flex-row h-14 gap-4 items-center justify-center bg-white py-2 px-6  rounded-lg ">
-                <Image
-                  src={AppStoreIcon}
-                  alt="GooglePlayStoreIcon"
-                  width={30}
-                />
+              <Link href="#getNotified">
+                <button className="flex flex-row h-10 gap-4 items-center justify-center bg-white py-2 px-6  rounded ">
+                  <Image
+                    src={AppStoreIcon}
+                    alt="GooglePlayStoreIcon"
+                    width={30}
+                  />
 
-                <div className="flex flex-col leading-tight">
-                  <p className=" -mt-1 text-colBlue02 font-dmsans font-normal">
-                    Coming Soon
-                  </p>
-                  <h2 className="-mt-1 font-urbanist font-bold text-colBlue02 text-xl">
-                    Apple Store
-                  </h2>
-                </div>
-              </button>
+                  <div className="flex flex-col leading-none">
+                    <p className=" mt-1 text-colBlue02 font-dmsans font-normal">
+                      Coming Soon
+                    </p>
+                    <h2 className="-mt-2 font-urbanist font-bold text-colBlue02 text-xl">
+                      Apple Store
+                    </h2>
+                  </div>
+                </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -174,7 +178,7 @@ const Footer = (props: Props) => {
         </h4>
 
         <div className=" justify-between flex flex-row  ">
-          <div className=" flex flex-col md:flex-row   text-white gap-6 border-white ml-4 mx-0 md:mx-20 px-4 py-8 font-urbanist font-medium md:w-full w-96  "></div>
+          <div className=" flex flex-col md:flex-row   text-white gap-6 border-white ml-4 mx-0 md:mx-20 px-4 py-8 font-urbanist font-medium md:w-full w-96"></div>
         </div>
       </div>
     </>
