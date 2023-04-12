@@ -1,10 +1,8 @@
 import {
   footerLogo,
-  twitter,
-  ig,
-  facebook,
-  PlayStoreIcon,
-  AppStoreIcon,
+  youtube,
+  appleStore,
+  googlePlayStore,
   Facebook,
   Twitter,
   linkedin,
@@ -12,12 +10,6 @@ import {
 } from "@/assets";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faFacebook,
-  faTwitter,
-  faInstagram,
-} from "@fortawesome/free-brands-svg-icons";
 
 type Props = {};
 
@@ -117,57 +109,35 @@ const Footer = (props: Props) => {
               </Link>
 
               <Link href="https://twitter.com/realtiestech">
-                <Image src={Twitter} alt="linkedinLogo" width={40} />
+                <Image src={Twitter} alt="TwitterLogo" width={40} />
               </Link>
 
-              <Link href="https://www.linkedin.com/company/realtiestech/mycompany/">
-                <Image src={Facebook} alt="linkedinLogo" width={40} />
+              <Link href="https://www.facebook.com/realtiestech">
+                <Image src={Facebook} alt="FacebookLogo" width={40} />
               </Link>
 
               <Link href="https://instagram.com/realtiestech?igshid=YmMyMTA2M2Y=">
-                <Image src={insta} alt="linkedinLogo" width={40} />
+                <Image src={insta} alt="InstaLogo" width={40} />
+              </Link>
+
+              <Link href="https://youtube.com/@realtiestech">
+                <Image src={youtube} alt="YoutubeLogo" width={40} />
               </Link>
             </div>
 
             {/* PlayStore, AppStore */}
 
-            <div className="flex flex-col md:flex-row gap-4 mt-8  mr-8">
+            <div className="flex flex-col md:flex-row gap-4 mt-8 mr-1 ">
               <Link href="#getNotified">
-                <button className="flex flex-row justify-center  items-center gap-4 bg-white px-6  h-10 rounded">
-                  <Image
-                    src={PlayStoreIcon}
-                    alt="GooglePlayStoreIcon"
-                    width={30}
-                  />
-
-                  <div className="flex flex-col leading-none">
-                    <p className=" mt-1 text-colBlue02 font-dmsans font-normal">
-                      Coming Soon
-                    </p>
-                    <h2 className=" -mt-2 font-urbanist font-bold text-colBlue02 text-xl">
-                      Google Play
-                    </h2>
-                  </div>
-                </button>
+                <Image
+                  src={googlePlayStore}
+                  alt="googlePlayStore"
+                  width={150}
+                />
               </Link>
 
               <Link href="#getNotified">
-                <button className="flex flex-row h-10 gap-4 items-center justify-center bg-white py-2 px-6  rounded ">
-                  <Image
-                    src={AppStoreIcon}
-                    alt="GooglePlayStoreIcon"
-                    width={30}
-                  />
-
-                  <div className="flex flex-col leading-none">
-                    <p className=" mt-1 text-colBlue02 font-dmsans font-normal">
-                      Coming Soon
-                    </p>
-                    <h2 className="-mt-2 font-urbanist font-bold text-colBlue02 text-xl">
-                      Apple Store
-                    </h2>
-                  </div>
-                </button>
+                <Image src={appleStore} alt="appleStore" width={165} />
               </Link>
             </div>
           </div>
