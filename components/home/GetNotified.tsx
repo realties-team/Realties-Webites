@@ -9,7 +9,10 @@ const GetNotified = (props: Props) => {
   return (
     <>
       {/* Background */}
-      <div className="flex flex-row bg-colBlue04 mx-auto  w-5/6 rounded-2xl mt-32 ">
+      <div
+        className="flex flex-row bg-colBlue04 mx-auto  w-5/6 rounded-2xl mt-32   "
+        id="#getNotified"
+      >
         {/* Main Container */}
 
         <div className="flex w-screen p-4 md:flex-row flex-col ">
