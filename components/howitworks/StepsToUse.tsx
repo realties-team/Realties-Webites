@@ -69,7 +69,7 @@ const StepsToUse = (props: Props) => {
             </div>
             <div>
               <h3 className="text-colBlue01 font-urbanist font-bold text-xl">
-                Book your choises
+                Book your choices
               </h3>
               <p className="text-colGray01 font-urbanist font-medium text-lg mt-2">
                 Third, you should book your property, after you click <br />{" "}
@@ -143,7 +143,7 @@ const StepsToUse = (props: Props) => {
             </div>
             <div>
               <h3 className="text-colBlue01 font-urbanist font-bold text-xl">
-                Book your choises
+                Book your choices
               </h3>
               <p className="text-colGray01 font-urbanist font-medium text-lg mt-2">
                 Third, you should book your property, after you click <br />{" "}

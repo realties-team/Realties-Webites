@@ -11,7 +11,7 @@ const StepsEndUser = (props: Props) => {
         {/* DESKTOP SCREEN */}
         <div className="w-1/2 md:ml-28 hidden md:flex  flex-col ">
           <h2 className="font-urbanist text-colBlue01 font-semibold text-[48px]  leading-none ">
-            Steps to use our service as <br /> an end users
+            Steps to use our service as <br /> an end user
           </h2>
 
           {/* 01 */}
@@ -55,7 +55,7 @@ const StepsEndUser = (props: Props) => {
             </div>
             <div>
               <h3 className="text-colBlue01 font-urbanist font-bold text-xl">
-                Book your choises
+                Book your choices
               </h3>
               <p className="text-colGray01 font-urbanist font-medium text-lg mt-2">
                 Third, you should book your property, after you click <br />{" "}
@@ -95,7 +95,7 @@ const StepsEndUser = (props: Props) => {
 
         <div className="flex md:hidden  flex-col mx-12 mt-12 ">
           <h2 className="font-urbanist text-colBlue01 font-semibold text-[35px]  leading-none text-center">
-            Steps to use our service <br /> as an end users
+            Steps to use our service <br /> as an end user
           </h2>
 
           {/* 01 */}
@@ -139,7 +139,7 @@ const StepsEndUser = (props: Props) => {
             </div>
             <div>
               <h3 className="text-colBlue01 font-urbanist font-bold text-xl">
-                Book your choises
+                Book your choices
               </h3>
               <p className="text-colGray01 font-urbanist font-medium text-lg mt-2">
                 Third, you should book your property, after you click <br />{" "}
