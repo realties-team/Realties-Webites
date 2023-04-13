@@ -132,7 +132,7 @@ const EarlyAccessForm = (props: Props) => {
                     id="email"
                     required
                     className="border-colGray04 border rounded outline-none py-1 px-2"
-                    pattern="/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i"
+                    // pattern="/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i"
                   />
                 </div>
               </div>
