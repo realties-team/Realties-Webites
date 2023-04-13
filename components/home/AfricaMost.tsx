@@ -13,15 +13,15 @@ const AfricaMost = (props: Props) => {
         </h3>
       </div>
 
-      <div className="flex flex-col md:flex-row items-center  mx-auto  gap-16 md:gap-48 mt-16 ">
+      <div className="  text-colGray05 font-urbanist text-lg flex flex-col md:flex-row items-center  mx-auto  gap-16 md:gap-48 mt-16 ">
         {/* 1 */}
-        <div className="flex flex-col items-center">
+        <div className="  text-colGray05 font-urbanist text-lg  flex flex-col items-center">
           <Image src={Africa1} alt="AfricaImage" width={80} className="" />
           <p
             className="mt-4
           "
           >
-            Lorem ipsum dolor sit amet <br /> consectetur Sed velit risus.
+            Get registered
           </p>
         </div>
 
@@ -29,17 +29,13 @@ const AfricaMost = (props: Props) => {
 
         <div className="flex flex-col items-center ">
           <Image src={Africa2} alt="AfricaImage" width={80} />
-          <p className="mt-4">
-            Lorem ipsum dolor sit amet <br /> consectetur. Sed velit risus.
-          </p>
+          <p className="mt-4">Initiate launch</p>
         </div>
 
         {/* 3 */}
         <div className="flex flex-col items-center ">
           <Image src={Africa3} alt="AfricaImage" width={80} />
-          <p className="mt-4">
-            Lorem ipsum dolor sit amet <br /> consectetur. Sed velit risus.
-          </p>
+          <p className="mt-4">Search and get the property of your dreams</p>
         </div>
       </div>
     </div>

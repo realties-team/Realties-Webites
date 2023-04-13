@@ -20,6 +20,7 @@ module.exports = {
         colGray02: "#A9B4CD",
         colGray03: "#DFE8F6",
         colGray04: "#BAB6B6",
+        colGray05: "#1B1D33",
         colGray05: "#696F79",
 
         colBlack01: "#333333",
